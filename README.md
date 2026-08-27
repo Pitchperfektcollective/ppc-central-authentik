@@ -16,6 +16,14 @@
 
 authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters.
 
+## PPC central authentication
+
+This repository is the active integration base for PPC's self-hosted central authentication platform. It is intended to provide a consistent identity layer for internal PPC applications, NAS services, and future protected deployments.
+
+PPC configuration is maintained separately from Authentik's core so upstream releases can be adopted cleanly. The platform will use standard OIDC for modern applications, SAML where required, and reverse-proxy protection for services that do not natively support an identity protocol.
+
+Deployment configuration, application registrations, role design, and operational runbooks belong in PPC-owned paths and must not modify Authentik's core authentication engine. All upstream license and security notices remain applicable.
+
 Our [enterprise offering](https://goauthentik.io/pricing) is available for organizations to securely replace existing IdPs such as Okta, Auth0, Entra ID, and Ping Identity for robust, large-scale identity management.
 
 ## Installation
